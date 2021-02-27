@@ -1,0 +1,17 @@
+<ul>
+	<li><a class="active" href="#home">ToDoリスト</a></li>
+	<li><a href="/new">タスク追加</a></li>
+	<li><a href="/delete">タスク消去</a></li>
+</ul>
+
+<h1>gyのsinatra練習サイト</h1>
+<p>簡単なwebアプリケーションTodoリストの作成</p>
+
+<h2>ToDoリスト</h2>
+<% begin %>
+	<% @list.each do |line| %>
+    	<%= "・" + line %></li><br>
+	<% end %>
+<% rescue %>
+	<p>タスクがありません</p>
+<% end %>
